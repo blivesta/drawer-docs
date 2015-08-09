@@ -1,0 +1,185 @@
+<h3 class="docs-subtitle">Step 1: Link required files</h3>
+
+{{#markdown}}
+``` html
+<!-- drawer css -->
+<link rel="stylesheet" href="{{file.meta.base_url}}css/drawer.min.css">
+
+<!-- jquery & iscroll & dropdown -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.1/iscroll-min.js"></script>
+<script src="//cdn.rawgit.com/ungki/bootstrap.dropdown/3.3.1/dropdown.min.js"></script>
+
+<!-- drawer js -->
+<script src="{{file.meta.base_url}}dist/js/jquery.drawer.min.js"></script>
+```
+{{/markdown}}
+
+<h3 class="docs-subtitle">Step 2: HTML markup</h3>
+{{#markdown}}
+``` html
+<body class="drawer drawer-right">
+
+  <header role="banner">
+  <div class="drawer-header">
+    <button type="button" class="drawer-toggle drawer-hamburger">
+      <span class="sr-only">toggle navigation</span>
+      <span class="drawer-hamburger-icon"></span>
+    </button>
+  </div>
+
+  <div class="drawer-main drawer-default">
+    <nav class="drawer-nav" role="navigation">
+      <div class="drawer-brand"><a href="./">drawer</a></div>
+
+      <ul class="drawer-menu">
+        <li class="drawer-menu-item"><a href="./base">base</a></li>
+      </ul>
+
+      <div class="drawer-footer"><span></span></div>
+    </nav>
+  </div>
+  </header>
+
+  <div class="drawer-overlay">
+  <!-- content -->
+  </div>
+
+</body>
+```
+{{/markdown}}
+
+<h3 class="docs-subtitle">Responsive markup</h3>
+<p>Left position</p>
+{{#markdown}}
+``` html
+<body class="drawer drawer-left drawer-responsive">
+```
+{{/markdown}}
+
+<p>Right position</p>
+{{#markdown}}
+``` html
+<body class="drawer drawer-right drawer-responsive">
+```
+{{/markdown}}
+
+
+
+<h3 class="docs-subtitle">Navbar markup</h3>
+<p>basic position</p>
+
+{{#markdown}}
+``` css
+.drawer-left
+.drawer-right
+.drawer-top
+```
+{{/markdown}}
+
+{{#markdown}}
+``` html
+<!-- relative navbar -->
+<body class="drawer drawer-top drawer-navbar">
+
+<!-- static navbar -->
+<body class="drawer drawer-left drawer-navbar drawer-static">
+
+<!-- fixed navbar -->
+<body class="drawer drawer-left drawer-navbar drawer-fixed">
+```
+{{/markdown}}
+
+<h3 class="docs-subtitle">Fixed navbar & dropdown menu</h3>
+{{#markdown}}
+``` html
+<body class="drawer drawer-left drawer-navbar drawer-fixed">
+
+  <header role="banner">
+  <div class="drawer-header">
+    ...
+  </div>
+  <div class="drawer-main drawer-navbar-default">
+    <nav class="drawer-nav" role="navigation">
+      <div class="drawer-brand"><a href="./">drawer</a></div>
+
+      <ul class="drawer-menu">
+        <li class="drawer-menu-item dropdown drawer-dropdown">
+          <a href="#" data-toggle="dropdown" role="button" aria-expanded="false">base <span class="caret"></span></a>
+          <ul class="drawer-submenu dropdown-menu" role="menu">
+          <li class="drawer-submenu-item"><a href="./">demo</a></li>
+          </ul>
+        </li>
+        <li class="drawer-menu-item dropdown drawer-dropdown-hover">
+          ...
+      </ul>
+
+    ...
+</body>
+```
+{{/markdown}}
+
+
+
+<h3 class="docs-subtitle">CSS</h3>
+<p>Theme</p>
+{{#markdown}}
+``` css
+.drawer-defult
+.drawer-navbar-default
+```
+{{/markdown}}
+
+
+
+<h3 class="docs-subtitle">Step 3: Call the Drawer</h3>
+{{#markdown}}
+``` javascript
+$(document).ready(function() {
+  $(".drawer").drawer();
+});
+```
+{{/markdown}}
+
+
+
+<h2 class="docs-title">API Methods</h2>
+{{#markdown}}
+``` javascript
+// Option
+$(".drawer").drawer({
+  apiToggleClass: "element"
+});
+
+// Open
+$('.element').on(function)() {
+  $('.drawer').drawer('open');
+});
+
+// close
+$('.element').on(function)() {
+  $('.drawer').drawer('close');
+});
+
+// toggle
+$('.element').on(function)() {
+  $('.drawer').drawer('toggle');
+});
+
+// destroy
+$('.element').on(function)() {
+  $('.drawer').drawer('destroy');
+});
+```
+{{/markdown}}
+
+<h2 class="docs-title">Events</h2>
+{{#markdown}}
+``` javascript
+// Opened
+$('#element').on('drawer.opened');
+
+// Closed
+$('#element').on('drawer.closed');
+```
+{{/markdown}}

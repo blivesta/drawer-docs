@@ -1,0 +1,57 @@
+<footer class="docs-footer" role="contentinfo">
+  <div class="docs-Container Container Container--slim t-gutter {{#is file.meta.layout "home"}}t-alignCenter{{/is}}">
+
+    <h2 class="docs-subtitle">{{site.title}}</h2>
+    {{#is file.meta.layout "home"}}
+      {{> include/social-buttons}}
+    {{/is}}
+
+    <ul class="ListInline t-mbXs">
+      <li itemprop="license">Code licensed under the MIT.</li>
+    </ul>
+
+    <ul class="ListInline">
+      <li><span class="icon-blivesta icon-sm icon-circle"></span>&nbsp;Other Projects</li>
+      <li><a href="http://git.blivesta.com/crosscover/">Crosscover</a></li>
+      <li>·</li>
+      <li><a href="/animsition">Animsition</a></li>
+      <li>·</li>
+      <li><a href="http://git.blivesta.com/drawer/">Drawer</a></li>
+      <li>·</li>
+      <li><a href="http://git.blivesta.com/chaffle" target="_black">Chaffle</a></li>
+      <li>·</li>
+      <li><a href="https://github.com/sircus">Sircus</a></li>
+      <li>·</li>
+      <li><a href="http://blivesta.com/" target="_blank">and more...</a></li>
+    </ul>
+
+  </div>
+</footer>
+
+<!-- Google analytics -->
+<script src="http://git.blivesta.com/js/ga.js"></script>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.1/iscroll-min.js"></script>
+<script src="//cdn.rawgit.com/ungki/bootstrap.dropdown/3.3.1/dropdown.min.js"></script>
+
+<script src="https://cdn.rawgit.com/blivesta/drawer/v3.0.0/dist/js/jquery.drawer.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.drawer').drawer();
+  $('.drawer-api-toggle').on(function(){
+    $('.drawer').drawer("open");
+  });
+  $('.drawer').on('drawer.opened',function(){
+    console.log('opened');
+  });
+  $('.drawer').on('drawer.closed',function(){
+    console.log('closed');
+  });
+  $('.drawer-dropdown-hover').hover(function(){
+    $('[data-toggle="dropdown"]', this).trigger('click');
+  });
+});
+</script>

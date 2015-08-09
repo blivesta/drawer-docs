@@ -1,0 +1,16 @@
+{{> include/head}}
+<body class="{{file.meta.class}}" itemscope itemtype="http://schema.org/WebPage">
+
+{{> include/header}}
+
+<main id="content" role="main" tabindex="-1">
+  <section class="docs-Container Container Container--slim t-gutter">
+    {{{block "content"}}}
+  </section>
+
+</main>
+
+{{> include/footer}}
+
+</body>
+</html>
