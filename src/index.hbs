@@ -9,22 +9,20 @@ base_url: "./"
 ---
 {{#extend "home"}}
 {{#content "content"}}
-<main id="content" role="main">
-
-  <section class="docs-Container Container Container--slim t-gutter t-alignCenter">
+<main id="content" role="main" tabindex="-1">
+  <section class="docs-Main Container Container--slim t-gutter t-alignCenter">
     <h2 class="docs-title">Demo</h2>
     <p class="icon-mark"><span class="oi oi-beaker"></span></p>
     {{> include/example-links}}
   </section>
 
-  <section class="docs-Container Container Container--slim t-gutter t-alignCenter">
+  <section class="docs-Main Container Container--slim t-gutter t-alignCenter">
     <h2 class="docs-title">Installation</h2>
     <p class="icon-mark"><span class="oi oi-code"></span></p>
-    <p><a href="{{site.repo_url}}" class="Button  Button--warning">Download on GitHub</a></p>
+    <p><a href="{{site.repo_url}}" class="Button Button--warning">Download on GitHub</a></p>
 
 {{> include/example-setup}}
   </section>
-
 </main>
 {{/content}}
 {{/extend}}

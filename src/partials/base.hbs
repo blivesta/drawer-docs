@@ -5,15 +5,21 @@
 
 <main id="content" role="main" tabindex="-1">
   {{#block "demo-main"}}
-  <section class="docs-Container Container Container--slim t-gutter">
+  {{#is file.meta.mode "responsive"}}
+  <div class="drawer-overlay">
+  {{/is}}
+  <section class="docs-Main Container Container--slim t-gutter">
     <h2 class="docs-title">Demo</h2>
       {{> include/example-links}}
   </section>
 
-  <section class="docs-Container Container Container--slim t-gutter">
+  <section class="docs-Main Container Container--slim t-gutter">
     <h2 class="docs-title">Installation</h2>
 {{> include/example-setup}}
   </section>
+  {{#is file.meta.mode "responsive"}}
+  </div>
+  {{/is}}
   {{/block}}
 </main>
 

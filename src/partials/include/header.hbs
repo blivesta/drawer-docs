@@ -163,7 +163,23 @@
     </nav>
   </div><!-- /.drawer-main -->
 
-  {{#is file.meta.layout "base"}}
+  {{#is file.meta.layout "home"}}
+  <section class="docs-masthead">
+    <div class="Container Container--slim t-gutter t-alignCenter">
+      <h1 itemprop="name">{{file.meta.title}}</h1>
+      <h2  itemprop="description">{{file.meta.description}}</h2>
+      <p><a class="Button Button--lg Button--drawer drawer-api-toggle"><span class="oi oi-menu"></span> Open</a></p>
+      {{> include/social-buttons}}
+      <p class="H6">Author :&nbsp;
+        <span class="icon-blivesta icon-sm"></span>&nbsp;
+        <a href="http://blivesta.com/" target="_blank" itemprop="author">blivesta</a>
+      </p>
+      <div class="docs-carbon t-center t-clear">
+        {{> include/carbon}}
+      </div>
+    </div>
+  </section>
+  {{else}}
   {{#is file.meta.mode "responsive"}}
   <div class="drawer-overlay">
   {{/is}}
@@ -185,21 +201,5 @@
   {{#is file.meta.mode "responsive"}}
   </div>
   {{/is}}
-  {{else}}
-  <section class="docs-masthead">
-    <div class="Container Container--slim t-gutter t-alignCenter">
-      <h1 itemprop="name">{{file.meta.title}}</h1>
-      <h2  itemprop="description">{{file.meta.description}}</h2>
-      <p><a class="Button Button--lg Button--drawer drawer-api-toggle"><span class="oi oi-menu"></span> Open</a></p>
-      {{> include/social-buttons}}
-      <p class="H6">Author :&nbsp;
-        <span class="icon-blivesta icon-sm"></span>&nbsp;
-        <a href="http://blivesta.com/" target="_blank" itemprop="author">blivesta</a>
-      </p>
-      <div class="docs-carbon t-center t-clear">
-        {{> include/carbon}}
-      </div>
-    </div>
-  </section>
   {{/is}}
 </header>
