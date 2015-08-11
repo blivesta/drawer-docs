@@ -10,7 +10,8 @@
   --docs-color: #556b7f;
   --docs-labels-bgcolor: #cbd5df;
   --docs-masthead-color: #fff;
-  --docs-masthead-bgcolor: #242d35;
+  --docs-masthead-bgcolor: #8c7732;
+  --docs-masthead-gradient: #d3c184;
   --docs-footer-bgcolor: #e7ddbc;
 
   --Button-transition: all 200ms ease-out;
