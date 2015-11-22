@@ -1,55 +1,7 @@
+@import "normalize.css";
 @import "sircus";
-@import "./header.css";
-@import "./main.css";
-@import "./footer.css";
-@import "./icon.css";
-@import "./button.css";
-@import "./highlight.css";
-
-:root {
-  --docs-color: #556b7f;
-  --docs-labels-bgcolor: #cbd5df;
-  --docs-masthead-color: #fff;
-  --docs-masthead-bgcolor: #8c7732;
-  --docs-masthead-gradient: #d3c184;
-  --docs-footer-bgcolor: #e7ddbc;
-
-  --Button-transition: all 200ms ease-out;
-  --Button--pill: 5rem;
-
-  --Button-drawer-fill: transparent;
-  --Button-drawer-borderColor: #d5d5d5;
-  --Button-drawer-color: #d5d5d5;
-  --ButtonFill-drawer-color: #444;
-  --ButtonFill-drawer-bgColor: #d5d5d5;
-
-  --Button-info-fill: transparent;
-  --Button-info-borderColor: #4d6172;
-  --Button-info-color: #435463;
-  --ButtonFill-info-color: #4d6172;
-  --ButtonFill-info-bgColor: #4d6172;
-
-  --Button-danger-fill: transparent;
-  --Button-danger-borderColor: #bc3219;
-  --Button-danger-color: #d3381c;
-  --ButtonFill-danger-color: #4d6172;
-  --ButtonFill-danger-bgColor: #d3381c;
-
-  --Button-notice-fill: transparent;
-  --Button-notice-borderColor: #7bc1eb;
-  --Button-notice-color: #7bc1eb;
-  --ButtonFill-notice-color: #fff;
-  --ButtonFill-notice-bgColor: #7bc1eb;
-
-  --Button-success-fill: transparent;
-  --Button-success-borderColor: #15a780;
-  --Button-success-color: #18be91;
-  --ButtonFill-success-color: #fff;
-  --ButtonFill-success-bgColor: #18be91;
-
-  --Button-warning-fill: transparent;
-  --Button-warning-borderColor: #d6a618;
-  --Button-warning-color: #e6b422;
-  --ButtonFill-warning-color: #fff;
-  --ButtonFill-warning-bgColor: #e6b422;
-}
+@import "jquery-drawer";
+@import "flexicon";
+@import "./highlight";
+@import "./docs";
+@import "./carbon";

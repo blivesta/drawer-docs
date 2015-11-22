@@ -1,0 +1,23 @@
+.carbon {
+  font-size: 80%;
+  min-height: 100px;
+  margin-bottom: 20px;
+  padding: var(--g-gutter);
+  background-color: var(--g-gray-5);
+}
+
+.carbon a {
+  text-decoration: none;
+  color: var(--g-gray-60);
+}
+
+.carbon img {
+  float: left;
+  margin-right: var(--g-space-xs);
+  margin-bottom: var(--g-space-xs);
+}
+
+.carbon .carbon-poweredby {
+  display: block;
+  margin-top: var(--g-space-tn);
+}

@@ -1,0 +1,40 @@
+---
+title: Install
+class: drawer drawer--left
+layout: page
+navbar: "false"
+sidebar: "false"
+base_url: "../"
+---
+{{#extend "page"}}
+{{#content "content"}}
+
+{{#markdown}}
+## Use the npm + Browserify.
+
+```
+$ npm install  jquery-drawer  jquery  iscroll
+```
+
+```js
+IScroll = require('iscroll');
+var $ = require('jquery');
+var drawer = require('jquery-drawer');
+```
+
+## Use the cssnext.
+
+input.css
+```css
+@import "jquery-drawer";
+```
+
+## Use the sass(scss).
+input.scss
+```css
+@import "./node_modules/jquery-drawer/scss/drawer.scss";
+```
+{{/markdown}}
+
+{{/content}}
+{{/extend}}

@@ -1,0 +1,37 @@
+{{#markdown}}
+```html
+<body class="{{file.meta.class}}">
+  <header role="banner">
+    <button type="button" class="drawer-toggle drawer-hamburger">
+      <span class="sr-only">toggle navigation</span>
+      <span class="drawer-hamburger-icon"></span>
+    </button>
+    <nav class="drawer-nav" role="navigation">
+      <ul class="drawer-menu">
+        <li><a class="drawer-brand" href="#">Brand</a></li>
+        <li><a class="drawer-menu-item" href="#">Nav1</a></li>
+        <li><a class="drawer-menu-item" href="#">Nav2</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main role="main">
+    <!-- Page content -->
+  </main>
+</body>
+```
+
+{{#isnot file.meta.base_url "./"}}
+<h4>Base position modifier <small>[ top | left | right ]</small></h4>
+
+```html
+<body class="drawer drawer--top">...</body>
+```
+```html
+<body class="drawer drawer--left">...</body>
+```
+```html
+<body class="drawer drawer--right">...</body>
+```
+{{/isnot}}
+
+{{/markdown}}

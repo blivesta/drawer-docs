@@ -1,0 +1,22 @@
+{{> include/head}}
+
+<body class="{{file.meta.class}}" itemscope itemtype="http://schema.org/WebPage">
+
+{{> include/header}}
+
+{{#is file.meta.sidebar "true"}}
+<div class="drawer-contents">
+{{/is}}
+
+<main id="content" class="Container t-gutter" role="main">
+
+{{> include/page-header}}
+
+{{{block "content"}}}
+
+</main>
+
+{{> include/footer}}
+
+</body>
+</html>

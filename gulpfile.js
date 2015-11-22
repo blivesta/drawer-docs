@@ -4,6 +4,7 @@ var del = require('del');
 var fs = require('fs');
 var ghpages = require('gulp-gh-pages');
 var gulp = require('gulp');
+var drawerPkg = require('jquery-drawer/package.json');
 var pkg = require('./package.json');
 var pagespeed = require('psi');
 var rename = require('gulp-rename');
@@ -52,6 +53,7 @@ gulp.task('html', function() {
       debug: true,
       data: {
         pkg: pkg,
+        drawerPkg: drawerPkg,
         site: yaml.safeLoad(fs.readFileSync('./site.yml', 'utf8'))
       },
       helpers: './node_modules/site-boilerplate-helpers/index.js',
@@ -132,7 +134,6 @@ gulp.task('css', function() {
       pkg: pkg
     }))
     .pipe(cssnext({
-      browsers: ['last 2 versions'],
       sourcemap: true
     }))
     .pipe(gulp.dest('./gh-pages/css'));
@@ -142,7 +143,6 @@ gulp.task('cssmin', function() {
   return gulp
     .src('./src/css/' + pkg.name + '.css')
     .pipe(cssnext({
-      browsers: ['last 2 versions'],
       compress: true
     }))
     .pipe(gulp.dest('./gh-pages/css'));

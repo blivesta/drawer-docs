@@ -1,11 +1,10 @@
 pre {
   display: block;
-  font-family: Consolas, Monaco, 'Andale Mono', monospace;
   padding: 14px;
+  font-family: Consolas, monaco, monospace;
   text-align: left;
-  background-color: #f7f7f9;
-  border: 1px solid #e1e1e8;
-  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid var(--g-gray-20);
   word-break: break-all;
   word-wrap: break-word;
 }

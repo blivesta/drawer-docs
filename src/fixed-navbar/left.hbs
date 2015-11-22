@@ -1,0 +1,19 @@
+---
+title: Fixed Navbar - Left
+class: drawer drawer--left drawer--topGutter
+layout: page
+navbar: "true"
+navbar_class: drawer-navbar--fixed
+sidebar: "false"
+base_url: "../"
+---
+{{#extend "page"}}
+{{#content "content"}}
+
+<section>
+<h2>Markup</h2>
+{{> include/markup-navbar}}
+</section>
+
+{{/content}}
+{{/extend}}

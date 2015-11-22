@@ -1,0 +1,19 @@
+---
+title: Right Navbar
+class: drawer drawer--right
+layout: page
+navbar: "true"
+nav_menu_class: drawer-menu--right
+sidebar: "false"
+base_url: "../../"
+---
+{{#extend "page"}}
+{{#content "content"}}
+
+<section>
+<h2>Markup</h2>
+{{> include/markup-navbar}}
+</section>
+
+{{/content}}
+{{/extend}}

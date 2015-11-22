@@ -1,0 +1,54 @@
+{{#markdown}}
+### use bootstrap dropdown.js
+
+<ol class="List">
+  <li>
+    <a href="https://github.com/twbs/bootstrap/blob/master/js/dropdown.js" target="_blank">Bootstrap dropdown.js</a>
+    &nbsp; <small>Created by <a href="https://github.com/twbs/bootstrap" target="_blank">Twitter, Inc</a>.</small>
+  </li>
+</ol>
+
+#### CDN
+
+```html
+<script src="http://cdn.rawgit.com/ungki/bootstrap.dropdown/3.3.5/dropdown.min.js"></script>
+```
+
+```html
+<ul class="drawer-menu">
+  <li><a class="drawer-menu-item" href="#">Left</a></li>
+  <li class="drawer-dropdown">
+    <a class="drawer-menu-item" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+      Navbar <span class="drawer-caret"></span>
+    </a>
+    <ul class="drawer-dropdown-menu">
+      <li><a class="drawer-dropdown-menu-item" href="#">Dropdown nav1</a></li>
+      <li><a class="drawer-dropdown-menu-item" href="#">Dropdown nav2</a></li>
+      <li><a class="drawer-dropdown-menu-item" href="#">Dropdown nav3</a></li>
+    </ul>
+  </li>
+</ul>
+```
+
+#### If you use to Browserify
+
+```
+$ npm install  jquery-drawer  jquery  iscroll  bootstrap
+```
+```js
+IScroll = require('iscroll');
+var $ = jQuery = require('jquery');
+var drawer = require('jquery-drawer');
+var dropdown = require('bootstrap/js/dropdown.js'); // bootstrap v3.3.5
+// var dropdown = require('bootstrap/dist/js/umd/dropdown.js'); // bootstrap v4.0.0-alpha
+```
+
+
+#### If you want to open the dropdown on hover.
+
+```js
+$('.drawer-dropdown').hover(function(){
+  $('[data-toggle="dropdown"]', this).trigger('click');
+});
+```
+{{/markdown}}

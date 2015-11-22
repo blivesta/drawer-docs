@@ -1,0 +1,59 @@
+  <h3>Navbar style</h3>
+{{#markdown}}
+```html
+<body class="{{file.meta.class}}">
+  <header class="drawer-navbar {{file.meta.navbar_class}}" role="banner">
+    <div class="drawer-navbar-container">
+      <div class="drawer-navbar-header">
+        <a class="drawer-brand drawer-brand--navber" href="#">Drawer</a>
+        <button type="button" class="drawer-toggle drawer-hamburger">
+          <span class="sr-only">toggle navigation</span>
+          <span class="drawer-hamburger-icon"></span>
+        </button>
+      </div>
+      <nav class="drawer-nav" role="navigation">
+        <ul class="drawer-menu {{file.meta.nav_menu_class}}">
+          <li><a class="drawer-menu-item" href="#">Nav1</a></li>
+          <li><a class="drawer-menu-item" href="#">Nav2</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main role="main">
+    <!-- Page content -->
+  </main>
+</body>
+```
+{{/markdown}}
+
+
+  <p>Fixed navbar position modifier <small>[ top | left | right ]</small></p>
+{{#markdown}}
+```html
+<body class="drawer drawer--top drawer-topGutter">
+  <header class="drawer-navbar drawer-navbar--fixed" role="banner">...</header>
+</body>
+```
+```html
+<body class="drawer drawer--left drawer-topGutter">
+  <header class="drawer-navbar drawer-navbar--fixed" role="banner">...</header>
+</body>
+```
+```html
+<body class="drawer drawer--right drawer-topGutter">
+  <header class="drawer-navbar drawer-navbar--fixed" role="banner">...</header>
+</body>
+drawer-menu--right
+```
+{{/markdown}}
+
+
+  <p><code>.drawer-menu</code> position modifier <small>[ left | right ]</small></p>
+{{#markdown}}
+```html
+<ul class="drawer-menu drawer-menu--left">...</ul>
+```
+```html
+<ul class="drawer-menu drawer-menu--right">...</ul>
+```
+{{/markdown}}
