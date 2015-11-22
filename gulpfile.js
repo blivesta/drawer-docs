@@ -1,16 +1,5 @@
 'use strict';
 
-var banner = [
-  '/*!',
-  ' * <%= pkg.name %> - <%= pkg.description %>',
-  ' * Version <%= pkg.version %>',
-  ' * <%= pkg.homepage %>',
-  ' * Author : <%= pkg.author %>',
-  ' * License : <%= pkg.license %>',
-  ' */',
-  ''
-].join('\n');
-
 var del = require('del');
 var fs = require('fs');
 var ghpages = require('gulp-gh-pages');
@@ -38,6 +27,17 @@ var hb = require('gulp-hb');
 var htmlmin = require('gulp-htmlmin');
 var htmlhint = require("gulp-htmlhint");
 var yaml = require('js-yaml');
+
+var banner = [
+  '/*!',
+  ' * <%= pkg.name %> - <%= pkg.description %>',
+  ' * Version <%= pkg.version %>',
+  ' * <%= pkg.homepage %>',
+  ' * Author : <%= pkg.author %>',
+  ' * License : <%= pkg.license %>',
+  ' */',
+  ''
+].join('\n');
 
 // ----------------------------------------------------------------
 
@@ -210,17 +210,21 @@ gulp.task('minify', ['cssmin', 'jsmin', 'htmlmin']);
 // ----------------------------------------------------------------
 
 gulp.task('default', ['build'], function(cb) {
-  runSequence(
-    ['serve'],
-    cb
-  );
+  runSequence(['serve'], cb);
 });
 
 // ----------------------------------------------------------------
 
 gulp.task('build', ['cleanup'], function(cb) {
   runSequence(
-    'js', 'css', 'html', ['sitemap', 'jshint', 'htmlhint'],
+    'js',
+    'css',
+    'html',
+    [
+      'sitemap',
+      'jshint',
+      'htmlhint'
+    ],
     cb
   );
 });
@@ -230,7 +234,8 @@ gulp.task('build', ['cleanup'], function(cb) {
 gulp.task('deploy', ['build'], function(cb) {
   runSequence(
     ['minify'],
-    'ghpages', ['pagespeed'],
+    'ghpages',
+    ['pagespeed'],
     cb
   );
 });
