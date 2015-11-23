@@ -1,4 +1,6 @@
 {{#markdown}}
+# Markup
+
 ```html
 <body class="{{file.meta.class}}">
   <header class="drawer-navbar {{file.meta.navbar_class}}" role="banner">
@@ -23,37 +25,30 @@
   </main>
 </body>
 ```
-{{/markdown}}
 
+## Fixed navbar position modifier [ top | left | right ]
 
-<p>Fixed navbar position modifier <small>[ top | left | right ]</small></p>
-{{#markdown}}
 ```html
-<body class="drawer drawer--top drawer-topGutter">
+<body class="drawer  drawer--top  drawer--navbarTopGutter">
   <header class="drawer-navbar drawer-navbar--fixed" role="banner">...</header>
 </body>
 ```
 ```html
-<body class="drawer drawer--left drawer-topGutter">
+<body class="drawer  drawer--left  drawer--navbarTopGutter">
   <header class="drawer-navbar drawer-navbar--fixed" role="banner">...</header>
 </body>
 ```
 ```html
-<body class="drawer drawer--right drawer-topGutter">
+<body class="drawer  drawer--right  drawer--navbarTopGutter">
   <header class="drawer-navbar drawer-navbar--fixed" role="banner">...</header>
 </body>
-drawer-menu--right
 ```
-{{/markdown}}
 
 
-<p><code>.drawer-menu</code> position modifier <small>[ left | right ]</small></p>
-{{#markdown}}
+## `.drawer-menu` position modifier [ right ]
+
 ```html
-<ul class="drawer-menu drawer-menu--left">...</ul>
-```
-```html
-<ul class="drawer-menu drawer-menu--right">...</ul>
+<ul class="drawer-menu  drawer-menu--right">...</ul>
 ```
 
 <p>

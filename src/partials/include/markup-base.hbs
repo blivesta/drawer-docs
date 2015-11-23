@@ -1,4 +1,9 @@
 {{#markdown}}
+
+{{#isnot file.meta.base_url "./"}}
+# Markup
+{{/isnot}}
+
 ```html
 <body class="{{file.meta.class}}">
   <header role="banner">
@@ -21,7 +26,7 @@
 ```
 
 {{#isnot file.meta.base_url "./"}}
-<h4>Base position modifier <small>[ top | left | right ]</small></h4>
+## `.drawer` position modifier [ top | left | right ]
 
 ```html
 <body class="drawer drawer--top">...</body>
