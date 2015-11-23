@@ -4,8 +4,3 @@ node_js:
 notifications:
   slack: blivesta:ygWmRLL4fyU0s7FFlVHSsJnS
   email: false
-
-before_script:
-  - npm install -g gulp
-
-script: gulp build
