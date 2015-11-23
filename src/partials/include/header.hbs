@@ -4,20 +4,21 @@
 
 <!-- Navbar -->
 <header class="drawer-navbar {{file.meta.navbar_class}}" role="banner">
-  <div class="Container t-md-gutter">
+  <div class="drawer-container">
     <div class="drawer-navbar-header">
-      <a class="drawer-brand drawer-brand--navber" href="{{file.meta.base_url}}">{{site.title}}</a>
+      <a class="drawer-brand" href="{{file.meta.base_url}}">{{site.title}}</a>
       <button type="button" class="drawer-toggle drawer-hamburger">
         <span class="sr-only">toggle navigation</span>
         <span class="drawer-hamburger-icon"></span>
       </button>
     </div>
-  </div>
+
   <nav class="drawer-nav" role="navigation">
     <ul class="drawer-menu {{file.meta.nav_menu_class}}">
       {{> include/demo-link}}
     </ul>
   </nav>
+</div>
 
 {{else}}
 

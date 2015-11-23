@@ -5,25 +5,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {{#is file.meta.base_url "./"}}
-  <meta name="description" content="{{pkg.description}}">
-  <title>{{site.title}} - {{pkg.description}}</title>
+  <meta name="description" content="{{drawerPkg.description}}">
+  <title>{{site.title}} - {{drawerPkg.description}}</title>
   {{else}}
   <title>{{file.meta.title}} - {{site.title}}</title>
   {{/is}}
   <meta property="og:title" content="{{site.title}}" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{sircus.pkg.url}}" />
-  <meta property="og:image" content="{{site.url}}images/blivesta.jpg" />
+  <meta property="og:url" content="{{drawerPkg.homepage}}" />
+  <meta property="og:image" content="http://www.blivesta.com/ico/blivesta-300.png" />
   <meta property="og:site_name"  content="{{site.title}}" />
-  <meta property="og:description" content="{{pkg.description}}" />
+  <meta property="og:description" content="{{drawerPkg.description}}" />
   <meta property="fb:app_id" content="1001771893195804" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@blivesta" />
   <meta name="twitter:creator" content="@blivesta" />
 
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{site.url}}touch-icon-144.png">
-  <link rel="shortcut icon" href="{{site.url}}favicon.ico">
+  <link href='https://fonts.googleapis.com/css?family=Lato:700,300' rel='stylesheet' type='text/css'>
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.blivesta.com/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="http://www.blivesta.com/ico/favicon.ico">
   <link rel="stylesheet" href="{{file.meta.base_url}}css/{{pkg.name}}.css">
 
   <!-- Google analytics -->

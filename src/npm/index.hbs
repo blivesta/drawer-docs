@@ -1,5 +1,5 @@
 ---
-title: Install
+title: Using the npm + Browserify, cssnext, Sass
 class: drawer drawer--left
 layout: page
 navbar: "false"
@@ -10,28 +10,28 @@ base_url: "../"
 {{#content "content"}}
 
 {{#markdown}}
-## Use the npm + Browserify.
+## npm + Browserify.
 
 ```
 $ npm install  jquery-drawer  jquery  iscroll
 ```
 
 ```js
+// your-project.js
 IScroll = require('iscroll');
 var $ = require('jquery');
 var drawer = require('jquery-drawer');
 ```
 
-## Use the cssnext.
+## cssnext or Sass (scss).
 
-input.css
 ```css
+/* your-project.css */
 @import "jquery-drawer";
 ```
 
-## Use the sass(scss).
-input.scss
 ```css
+/* your-project.scss */
 @import "./node_modules/jquery-drawer/scss/drawer.scss";
 ```
 {{/markdown}}
