@@ -10,30 +10,64 @@ base_url: "../"
 {{#content "content"}}
 
 {{#markdown}}
-## npm or Bower + Browserify.
+## Install
 
+npm:
 ```
-$ npm install  jquery-drawer  jquery  iscroll
+$ npm install jquery-drawer jquery iscroll
 ```
 
+Bower:
 ```
-$ bower install drawer
+$ bower install drawer jquery iscroll
+```
+
+
+### Webpack
+
+```js
+// webpack.config.js
+var webpack = require('webpack')
+
+module.exports =  {
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      IScroll: 'iscroll',
+    }),
+  ],
+}
 ```
 
 ```js
 // your-project.js
-IScroll = require('iscroll');
+var IScroll = require('iscroll');
 var $ = require('jquery');
-var drawer = require('jquery-drawer');
+require('jquery-drawer');
+
+$('.drawer').drawer();
 ```
 
-## cssnext or Sass (scss).
+
+### Browserify
+```js
+// your-project.js
+IScroll = require('iscroll');
+var $ = jQuery = require('jquery');
+require('jquery-drawer');
+
+$('.drawer').drawer();
+```
+
+## postcss-import
 
 ```css
 /* your-project.css */
 @import "jquery-drawer";
 ```
 
+## Sass (scss).
 ```css
 /* your-project.scss */
 @import "./node_modules/jquery-drawer/scss/drawer.scss";

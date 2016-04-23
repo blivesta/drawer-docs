@@ -1,8 +1,8 @@
 IScroll = require('iscroll');
 var $ = jQuery = require('jquery');
-var drawer = require('jquery-drawer');
-// var dropdown = require('bootstrap/js/dropdown.js'); // bootstrap v3.3.5
-var dropdown = require('bootstrap/dist/js/umd/dropdown.js'); // bootstrap v4.0.0-alpha
+require('jquery-drawer');
+// require('bootstrap/js/dropdown.js'); // bootstrap v3.3.5
+require('bootstrap/dist/js/umd/dropdown.js'); // bootstrap v4.0.0-alpha
 
 $(document).on('ready', function(){
   $('.drawer')
