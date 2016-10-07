@@ -7,6 +7,7 @@ pre {
   border: 1px solid var(--g-gray-20);
   word-break: break-all;
   word-wrap: break-word;
+  font-size: 14px;
 }
 pre code[class*="language-"] {
   white-space: pre-wrap;
